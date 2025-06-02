@@ -1,4 +1,4 @@
-Answered questions from `compnet_common.pdf` by analyzing `packet_capture.pcapng` in Wireshark.
+Answered questions in `compnet_common.pdf` by analyzing `packet_capture.pcapng` in Wireshark.
 
 **Files:**
 - Capture: packet_capture.pcapng
