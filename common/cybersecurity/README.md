@@ -8,6 +8,8 @@ This report documents the use of Google Dorks to identify publicly exposed Tesla
 
 ### 1. Publicly Accessible Confidential Documents
 
+![image](https://github.com/user-attachments/assets/9ca2fc03-0240-4726-ad61-75175eb573ad)
+
 **Dork:** `site:tesla.com "confidential"`
 * **Findings:**
     * Archived Model Y reference diagram (original locked, accessed via Wayback Machine):
