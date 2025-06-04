@@ -29,16 +29,15 @@ The core idea is based on a mathematical property of polynomials: a unique polyn
 
 1.  Save the code as a Python file (e.g., `sss.py`).
 2.  Run it from your terminal:
-3. 
-    ```
+    ```bash
     python sss.py
     ```
-4.  Follow the interactive prompts:
+3.  Follow the interactive prompts:
     * Enter your secret number.
     * Enter the total number of shares (`n`) you want to create.
     * Enter the threshold of shares (`k`) required to reconstruct the secret.
-5.  The program will display the generated shares.
-6.  To test the reconstruction, you will be prompted to enter `k` number of shares.
+4.  The program will display the generated shares.
+5.  To test the reconstruction, you will be prompted to enter `k` number of shares.
 
 ### Example
 
@@ -75,7 +74,6 @@ Process finished with exit code 0
 ---
 
 ## Functions breakdown
-
 
 - **`generate_polynomial(secret, degree)`**  
   Builds a random polynomial where the secret is the constant term. Used to hide the secret in math.
