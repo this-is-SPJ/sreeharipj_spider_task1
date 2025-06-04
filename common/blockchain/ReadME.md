@@ -28,7 +28,7 @@ The core idea is based on a mathematical property of polynomials: a unique polyn
 ## Run the Program
 
 1.  Save the code as a Python file (e.g., `sss.py`).
-2.  Run it from your terminal:
+2.  Run it from your terminal(no external libraries needed):
     ```bash
     python sss.py
     ```
