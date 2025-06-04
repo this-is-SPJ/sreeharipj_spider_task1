@@ -19,7 +19,7 @@ This report documents the use of Google Dorks to identify publicly exposed Tesla
 
 **Dork:** `"tesla" filetype:xlsx "confidential"`
 * **Finding:**
-    * Tesla employee contacts:
+    * Tesla employee contacts and confidentail company statements:
         * `https://www.neso.energy/document/323126/download`
 
 ---
