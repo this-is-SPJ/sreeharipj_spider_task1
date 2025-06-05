@@ -17,6 +17,6 @@ Initial recon was performed on `*.spider.nitt.edu` due to unclear specification 
 Refer to `/spider.nitt.edu/`
 
 ### Phase 2: spider-nitt.org  
-Later clarification revealed that the intended target was `spider-nitt.org`.  
+Later clarification revealed that the intended target was `*.spider-nitt.org`.  
 Deep analysis of subdomain `spidertest.spider-nitt.org` led to the discovery of an exposed DVWA (Damn Vulnerable Web Application) instance.
 Refer to `/spider-nitt.org/`
