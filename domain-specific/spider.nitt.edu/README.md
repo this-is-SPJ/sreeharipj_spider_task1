@@ -6,11 +6,6 @@ This document summarizes reconnaissance and exploitation findings on the `spider
 
 ---
 
-## Scope
-*.spider.nitt.edu
-(subdomains of spider server)
-
-
 ## Reconnaissance
 
 **Target:** spider.nitt.edu (203.129.195.136)
@@ -18,26 +13,25 @@ This document summarizes reconnaissance and exploitation findings on the `spider
 **Web Server:** Nginx 1.20.1
 
 **Used subfinder to find 9 subdomains:**
-api.spider.nitt.edu
-restapis.lcas.spider.nitt.edu
-lynx.spider.nitt.edu
-api.lynx.spider.nitt.edu
-api.lynxid.spider.nitt.edu
-ctf.spider.nitt.edu
-inductions.spider.nitt.edu
-api.inductions.spider.nitt.edu
-grpc.lcas.spider.nitt.edu
+*api.spider.nitt.edu
+*restapis.lcas.spider.nitt.edu
+*lynx.spider.nitt.edu
+*api.lynx.spider.nitt.edu
+*api.lynxid.spider.nitt.edu
+*ctf.spider.nitt.edu
+*inductions.spider.nitt.edu
+*api.inductions.spider.nitt.edu
+*grpc.lcas.spider.nitt.edu
 
-from these i thought that one of the subdomain was vernerable (which was wrongly assumed), various methods of recon was used, then these are what i found
+from these i thought that one of the subdomain was vernerable **(which was wrongly assumed)**, various methods of recon was used, then these are what i found
 
 ---
 
 ## inductions.spider.nitt.edu
 
+* The **reCAPTCHA** is not properly configured server-side, allowing unauthenticated OTP requests which enables user enumeration and opens the endpoint to automated abuse or denial-of-service attacks. **(Refer POC_1.py)**
+* **Insecure Direct Object Reference (IDOR)** in the private API endpoint /api/user/isInducted, which fails to enforce authorization checks on the menteeId field. This allows any authenticated user with a valid JWT token to enumerate domain applications of other users by simply modifying the menteeId in the POST request body—revealing which domains any target mentee has applied to, even if the requesting user has no privileges to access that information. **Refer POC_2.py** 
 * inductions.spider.nitt.edu allows HTTP PUT and DELETE methods without authentication(200 OK), but not able to exploit.(refer txt attached)
-* 
-
-
 
 ---
 
