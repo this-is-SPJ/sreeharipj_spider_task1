@@ -2,7 +2,7 @@
 
 ### Subdomain Enumeration
 
-Tool used: `subfinder`  
+Tool used: `subfinder`  (used crt, but not worth it)
 Identified **~100 subdomains**. Full list archived in `subdomains.txt`. Notable examples include:
 
 - `admin.spider-nitt.org`
