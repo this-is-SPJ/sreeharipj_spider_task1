@@ -1,3 +1,5 @@
+# DO NOT LOOK, under construction :)
+
 # Recon & Exploitation on "spider server"
 
 This document summarizes reconnaissance and exploitation findings on the `spider.nitt.edu` infrastructure during the Spider R&D Club selection process. The goal was to identify vulnerabilities, misconfigurations, and insecure design patterns across subdomains and endpoints using open-source tools and manual testing.
@@ -7,7 +9,7 @@ This document summarizes reconnaissance and exploitation findings on the `spider
 ## Scope
 *.spider.nitt.edu
 (subdomains of spider server)
----
+
 
 ## Reconnaissance
 
@@ -28,15 +30,18 @@ grpc.lcas.spider.nitt.edu
 
 from these i thought that one of the subdomain was vernerable (which was wrongly assumed), various methods of recon was used, then these are what i found
 
-### inductions.spider.nitt.edu
+---
+
+## inductions.spider.nitt.edu
 
 * inductions.spider.nitt.edu allows HTTP PUT and DELETE methods without authentication(200 OK), but not able to exploit.(refer txt attached)
 * 
 
 
 
+---
 
-### api,spider.nitt.edu
+## api,spider.nitt.edu
 
 Insecure CORS Configuration on GraphQL Endpoint <<< found while monitering `https://api.spider.nitt.edu/signin` via burp
 
