@@ -23,7 +23,7 @@ def check_user_existence(roll_number):
 
 
 
-# this is bad, recaptcha not setup , this is bad, recaptcha not setup (i changed it to "" )
+# this is bad, recaptcha not setup  (i changed it to "" )
         "recaptcha": ""
 
 
