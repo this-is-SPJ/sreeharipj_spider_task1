@@ -1,8 +1,6 @@
-# DO NOT LOOK, under construction :)
-
 # Recon & Exploitation on "spider server"
 
-This document summarizes reconnaissance and exploitation findings on the `spider.nitt.edu` infrastructure during the Spider R&D Club selection process. The goal was to identify vulnerabilities, misconfigurations, and insecure design patterns across subdomains and endpoints using open-source tools and manual testing.
+This document summarizes reconnaissance and exploitation findings on the `spider.nitt.edu` infrastructure during the Spider R&D Club induction process. The goal was to identify vulnerabilities, misconfigurations, and insecure design patterns across subdomains and endpoints using open-source tools and manual testing.
 
 ---
 
