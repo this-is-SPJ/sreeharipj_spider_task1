@@ -1,0 +1,41 @@
+└─$ nuclei -u https://spidertest.spider-nitt.org -as
+WARNING:(ast) sonic only supports go1.17~1.23, but your environment is not suitable
+
+                     __     _
+   ____  __  _______/ /__  (_)
+  / __ \/ / / / ___/ / _ \/ /
+ / / / / /_/ / /__/ /  __/ /
+/_/ /_/\__,_/\___/_/\___/_/   v3.3.9
+
+                projectdiscovery.io
+
+[INF] Your current nuclei-templates  are outdated. Latest is v10.2.2
+[INF] Successfully updated nuclei-templates (v10.2.2) to /home/kali/.local/nuclei-templates. GoodLuck!
+
+Nuclei Templates v10.2.2 Changelog
++-------+-------+----------+---------+
+| TOTAL | ADDED | MODIFIED | REMOVED |
++-------+-------+----------+---------+
+| 10998 | 10998 |        0 |       0 |
++-------+-------+----------+---------+
+[INF] Current nuclei version: v3.3.9 (outdated)
+[INF] Current nuclei-templates version: v10.2.2 (latest)
+[WRN] Scan results upload to cloud is disabled.
+[INF] New templates added in latest release: 65
+[INF] Templates loaded for current scan: 7988
+[WRN] Loading 198 unsigned templates for scan. Use with caution.
+[INF] Executing 7790 signed templates from projectdiscovery/nuclei-templates
+[INF] Targets loaded for current scan: 1
+[INF] Automatic scan tech-detect: Templates clustered: 449 (Reduced 426 Requests)
+[INF] Executing Automatic scan on 1 target[s]
+[fingerprinthub-web-fingerprints:dvwa] [http] [info] https://spidertest.spider-nitt.org/login.php
+[tech-detect:nginx] [http] [info] https://spidertest.spider-nitt.org/login.php
+[tech-detect:php] [http] [info] https://spidertest.spider-nitt.org/login.php
+[tech-detect:nginx] [http] [info] https://spidertest.spider-nitt.org
+[tech-detect:php] [http] [info] https://spidertest.spider-nitt.org
+[waf-detect:nginxgeneric] [http] [info] https://spidertest.spider-nitt.org
+[INF] Found 4 tags and 4 matches on detection templates on https://spidertest.spider-nitt.org [wappalyzer: 2, detection: 6]
+[INF] Executing 66 templates on https://spidertest.spider-nitt.org
+[dvwa-default-login] [http] [critical] https://spidertest.spider-nitt.org/index.php [password="password",username="admin"]
+[INF] Using Interactsh Server: oast.me
+                                        
