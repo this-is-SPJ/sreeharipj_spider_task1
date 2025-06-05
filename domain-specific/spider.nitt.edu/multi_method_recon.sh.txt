@@ -29,6 +29,9 @@ for domain in "${domains[@]}"; do
     echo ""
 done
 echo "--- Multi-Method Status Check Complete ---"
+
+#below is the ouput
+
 --- Multi-Method Status Check ---
 TARGET: api.lynx.spider.nitt.edu
   GET -> 429
