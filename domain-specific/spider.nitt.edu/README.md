@@ -11,15 +11,15 @@ This document summarizes reconnaissance and exploitation findings on the `spider
 **Web Server:** Nginx 1.20.1
 
 **Used subfinder to find 9 subdomains:**
-*api.spider.nitt.edu
-*restapis.lcas.spider.nitt.edu
-*lynx.spider.nitt.edu
-*api.lynx.spider.nitt.edu
-*api.lynxid.spider.nitt.edu
-*ctf.spider.nitt.edu
-*inductions.spider.nitt.edu
-*api.inductions.spider.nitt.edu
-*grpc.lcas.spider.nitt.edu
+* api.spider.nitt.edu
+* restapis.lcas.spider.nitt.edu
+* lynx.spider.nitt.edu
+* api.lynx.spider.nitt.edu
+* api.lynxid.spider.nitt.edu
+* ctf.spider.nitt.edu
+* inductions.spider.nitt.edu
+* api.inductions.spider.nitt.edu
+* grpc.lcas.spider.nitt.edu
 
 from these i thought that one of the subdomain was vernerable **(which was wrongly assumed)**, various methods of recon was used, then these are what i found
 
