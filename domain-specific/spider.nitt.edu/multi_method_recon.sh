@@ -1,0 +1,112 @@
+#!/bin/bash
+
+# multi_method_recon.sh - Multi-Method Status Check
+# Usage: ./multi_method_recon.sh
+
+domains=(
+    api.lynx.spider.nitt.edu
+    api.lynxid.spider.nitt.edu
+    api.spider.nitt.edu
+    api.inductions.spider.nitt.edu
+    grpc.lcas.spider.nitt.edu
+    restapis.lcas.spider.nitt.edu
+    ctf.spider.nitt.edu
+    inductions.spider.nitt.edu
+    lynx.spider.nitt.edu
+)
+
+echo "--- Multi-Method Status Check ---"
+for domain in "${domains[@]}"; do
+    echo "TARGET: $domain"
+    for method in GET POST HEAD PUT DELETE OPTIONS PATCH; do
+        code=$(curl -s -o /dev/null -w "%{http_code}" -X "$method" "https://$domain" 2>/dev/null)
+        if [[ -n "$code" ]]; then
+            echo "  $method -> $code"
+        else
+            echo "  [-] Error checking $method."
+        fi
+    done  
+    echo ""
+done
+echo "--- Multi-Method Status Check Complete ---"
+--- Multi-Method Status Check ---
+TARGET: api.lynx.spider.nitt.edu
+  GET -> 429
+  POST -> 429
+  HEAD -> 429
+  PUT -> 429
+  DELETE -> 429
+  OPTIONS -> 429
+  PATCH -> 429
+
+TARGET: api.lynxid.spider.nitt.edu
+  GET -> 200
+  POST -> 404
+  HEAD -> 200
+  PUT -> 404
+  DELETE -> 404
+  OPTIONS -> 204
+  PATCH -> 404
+
+TARGET: api.spider.nitt.edu
+  GET -> 302
+  POST -> 302
+  HEAD -> 302
+  PUT -> 302
+  DELETE -> 302
+  OPTIONS -> 204
+  PATCH -> 302
+
+TARGET: api.inductions.spider.nitt.edu
+  GET -> 200
+  POST -> 404
+  HEAD -> 200
+  PUT -> 404
+  DELETE -> 404
+  OPTIONS -> 204
+  PATCH -> 404
+
+TARGET: grpc.lcas.spider.nitt.edu
+  GET -> 404
+  POST -> 404
+  HEAD -> 404
+  PUT -> 404
+  DELETE -> 404
+  OPTIONS -> 404
+  PATCH -> 404
+
+TARGET: restapis.lcas.spider.nitt.edu
+  GET -> 401
+  POST -> 401
+  HEAD -> 401
+  PUT -> 401
+  DELETE -> 401
+  OPTIONS -> 401
+  PATCH -> 401
+
+TARGET: ctf.spider.nitt.edu
+  GET -> 000
+  POST -> 000
+  HEAD -> 000
+  PUT -> 000
+  DELETE -> 000
+  OPTIONS -> 000
+  PATCH -> 000
+
+TARGET: inductions.spider.nitt.edu
+  GET -> 200
+  POST -> 200
+  HEAD -> 200
+  PUT -> 200
+  DELETE -> 200
+  OPTIONS -> 200
+  PATCH -> 200
+
+TARGET: lynx.spider.nitt.edu
+  GET -> 200
+  POST -> 405
+  HEAD -> 200
+  PUT -> 405
+  DELETE -> 405
+  OPTIONS -> 204
+  PATCH -> 405
