@@ -1,14 +1,22 @@
-# Domain-Specific Task – Cybersecurity
+# Cybersecurity - Domain specific
 
-This directory contains reconnaissance and exploitation work for the Spider R&D Club Cybersecurity task.
+## Task 1 – Reconnaissance
 
-## Objective
+Map the surface area of the web app: `http://testphp.vulnweb.com`
+Refer to `/Recon-vulnweb/`
 
-Perform full-stack analysis and offensive security testing on the given target:
+---
 
-- **Target**: `spidertest.spider-nitt.org`
-- **Scope**: Reconnaissance, vulnerability analysis, and exploitation
-- **Constraints**: Ethical use only, within scope and time limits specified
+## Task 3 – Live Recon & Exploitation
 
-## Structure
+**Objective:**  
+Conduct real-world recon and basic exploitation on the Spider server.
 
+### Phase 1: spider.nitt.edu  
+Initial recon was performed on `*.spider.nitt.edu` due to unclear specification of the "Spider Server".  
+Refer to `/spider.nitt.edu/`
+
+### Phase 2: spider-nitt.org  
+Later clarification revealed that the intended target was `spider-nitt.org`.  
+Deep analysis of subdomain `spidertest.spider-nitt.org` led to the discovery of an exposed DVWA (Damn Vulnerable Web Application) instance.
+Refer to `/spider-nitt.org/`
