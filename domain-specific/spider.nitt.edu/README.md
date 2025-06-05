@@ -28,7 +28,7 @@ from these i thought that one of the subdomain was vernerable **(which was wrong
 ## inductions.spider.nitt.edu
 
 * The **reCAPTCHA** is not properly configured server-side, allowing unauthenticated OTP requests which enables user enumeration and opens the endpoint to automated abuse or denial-of-service attacks. **(Refer POC_1.py)**
-* **Insecure Direct Object Reference (IDOR)** in the private API endpoint /api/user/isInducted, which fails to enforce authorization checks on the menteeId field. This allows any authenticated user with a valid JWT token to enumerate domain applications of other users by simply modifying the menteeId in the POST request body—revealing which domains any target mentee has applied to, even if the requesting user has no privileges to access that information. **Refer POC_2.py** 
+* **Insecure Direct Object Reference (IDOR)** in the private API endpoint `/api/user/isInducted`, which fails to enforce authorization checks on the menteeId field. This allows any authenticated user with a valid JWT token to enumerate domain applications of other users by simply modifying the menteeId in the POST request body—revealing which domains any target mentee has applied to, even if the requesting user has no privileges to access that information. **Refer POC_2.py** 
 * inductions.spider.nitt.edu allows HTTP PUT and DELETE methods without authentication(200 OK), but not able to exploit.(refer txt attached)
 
 ---
